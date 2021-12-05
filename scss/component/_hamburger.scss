@@ -1,0 +1,97 @@
+@charset "utf-8";
+
+
+// /*========= ボタンのためのCSS ===============*/
+
+.burger__btn{
+  @include mq(mi){
+    position: relative;/*ボタン内側の基点となるためrelativeを指定*/
+    // background:rgb(189, 105, 105);
+    position:fixed;
+    z-index: 9999;
+    background:#FFF;
+    cursor: pointer;
+    width: 8rem;
+    height:8rem;
+    top: 0;
+    right: 0;
+    // 3本線の位置調整
+    box-sizing: border-box;
+  }
+}
+
+.bar__btn{
+  @include mq(mi){
+    display: inline-block;
+    transition: all .4s;/*アニメーションの設定*/
+    position: absolute;
+    left: 2.5rem;
+    height: 0.3rem;
+    width: 3.5rem;
+    background: #101010;
+  }
+}
+
+.bar__top {
+  @include mq(mi){
+
+    top:2.8rem; 
+  }
+}
+
+.bar__mid{
+  @include mq(mi){
+
+    top:4rem;
+  }
+}
+
+.bar__bottom{
+  @include mq(mi){
+
+    top:5.1rem;
+  }
+}
+
+/*activeクラスが付与されると線が回転して×に*/
+
+
+.bar__top.active {
+  @include mq(mi){
+
+    top: 3.8rem;
+    // left: 2.5rem;
+    transform: translateY(6px) rotate(-45deg);
+    // width: 3.5rem;
+  }
+}
+
+.bar__mid.active{
+  @include mq(mi){
+
+    opacity: 0;/*真ん中の線は透過*/
+  }
+}
+
+.bar__bottom.active {
+  @include mq(mi){
+
+    top: 5rem;
+    // left: 2.5rem;
+    transform: translateY(-6px) rotate(45deg);
+    // width: 3.5rem;
+  }
+}
+
+//しかいい枠を消すための
+// .burger__btn.panelactive{
+//   @include mq(mi){
+//     background-color:rgba(255,255,255,0.1);
+//   }
+// }
+
+
+
+
+
+

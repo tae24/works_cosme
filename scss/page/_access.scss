@@ -1,0 +1,135 @@
+@charset "utf-8"; 
+
+.access{
+  &__wrapper{
+    max-width: 104rem;
+    // サイドの余白を引いた幅
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 15rem;
+    margin-bottom: 21.9rem;
+    @include mq(mi){
+      max-width: initial;
+      width: 95%;
+      display: block;
+      margin-top: 9.7rem;
+      padding-left: 1.5rem;
+      margin-bottom: 8.3rem;
+    }
+  }
+  &__titlebox{
+    margin-bottom: 9.3rem;
+    @include mq(mi){
+      margin-bottom: 4.4rem;
+    }
+  }
+  &__subTitle{
+    font-size: 1.6rem;
+    margin-top: 4.4rem;
+    @include mq(mi){
+      font-size: 1.2rem;
+      margin-top: 2.1rem;
+    }
+  }
+  &__container{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15.4rem;
+    @include mq(mi){
+      display: block;
+      margin-bottom: 3.719rem;
+    }
+  }
+}
+
+
+
+.accessDetail{
+  &__area{
+    @include mq(mi){
+      margin-bottom: 13rem;
+    }
+  }
+  &__list{
+    font-size: 2.4rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    @include mq(mi){
+      font-size: 1.8rem;
+    }
+  }
+  &__item{
+    font-size: 1.6rem;
+    margin-bottom: 2.9rem;
+    @include mq(mi){
+      font-size: 1.2rem;
+      margin-bottom: 2.4rem;
+    }
+  }
+  &__link{
+    color: #000;
+  }
+  &__map{
+    max-width: 66.4rem;
+    width: 100%;
+    position: relative;
+    width: 100%;
+    padding-top: 40%;
+    overflow:auto; 
+    -webkit-overflow-scrolling:touch;
+    @include mq(mi){
+      position: initial;
+      max-width: initial;
+      width: 95%;
+      padding: 0;
+    }
+  }
+  &__map iframe{
+    text-align-last: left;
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    border:none;
+    display:block;
+    @include mq(mi){
+      text-align: center;
+      position: initial;
+    }
+  }
+}
+
+.accessSummary{
+  &__area{
+    max-width: 75.1rem;
+    width: 100%;
+    margin: 0 auto;
+    @include mq(mi){
+      max-width: initial;
+      width: 95%;
+    }
+  }
+  &__title{
+    font-size: 2.4rem;
+    margin-bottom: 3.1rem;
+  }
+  &__text{
+    font-size: 1.6rem;
+    line-height: 1.5;
+    letter-spacing: 0.08rem;
+    margin-bottom: 2rem;
+    @include mq(mi){
+      font-size: 1.2rem;
+      line-height: 2;
+      letter-spacing: 0.06rem;
+    }
+  }
+  &__textsp{
+    @include mq(mi){
+      display: none;
+    }
+  }
+  
+}
+

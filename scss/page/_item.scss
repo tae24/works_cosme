@@ -1,0 +1,81 @@
+@charset "utf-8";
+
+.item{
+  &__wrapper{
+    max-width: 104rem;
+    // サイドの余白を引いた幅
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 14.7rem;
+    padding-left: 2rem;
+    @include mq(mi){
+      // max-width: 34.5rem;
+      // padding-left: 1.5rem;
+      max-width: initial;
+      padding-left: 0;
+      margin: 12.64rem 0 0 0;
+    }
+  }
+  &__titleBox{
+    @include mq(mi){
+      padding-left: 1.5rem;
+    }
+  }
+  &__subTitle{
+    font-size: 1.6rem;
+    margin: 3.5rem 0 2.3rem 0;
+    @include mq(mi){
+      font-size: 1.2rem;
+      margin: 2.9em 0 3.2rem 0 ;
+    }
+  }
+}
+
+.itemInfo{
+  &__container{
+    @include mq(mi){
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    }
+  }
+  &__area{
+    display: flex;
+    justify-content: space-between;
+    @include mq(mi){
+      display: block;
+    }
+  }
+  &__unit{
+    width: calc(33.3333% - 1.6rem * 2 / 3);
+    @include mq(mi){
+      margin-bottom: 3rem;
+    }
+  }
+  &__unit +
+  &__unit {
+    margin-left: 1.6rem;
+    @include mq(mi){
+      margin-left: 0;
+    }
+  }
+  &__imgbox{
+    // aspect-ratio: 324 / 215;
+    padding-top: 66.358%;
+    // 215 割る 324 かける 100
+    position: relative;
+  }
+  &__img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    // top:50%;
+    // left: 50%;
+    // transform: translate(50% - 50%);
+    width: 100%;
+    height: 100%;
+    // object-fit: cover;
+    @include mq(mi){
+      // margin-bottom: 1.4rem;
+    }
+  }
+}

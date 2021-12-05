@@ -1,0 +1,41 @@
+@charset "utf-8";
+
+// @use "variable" as v;
+// @use "base";
+// @use "base/variable" as v;
+
+// @import "base/base";
+// @import "base/breakpoint";
+// @import "base/variable";
+
+@import "base/init";
+@import "layout/init";
+@import "page/init";
+@import "component/init";
+@import "global/init";
+
+
+// html {
+//   //375px~787px
+//   font-size: 10px;
+//   // 62.5%と同じ意味remは10分の1でOK
+//   @include mq("md") {
+//         font-size: 10 / 1100 * 100vw;
+//   }
+//   // 768(md)以上が10割る1100掛ける100vw
+//   //これで数値入れなくてもタブレットの時文字が小さくなる。書かなくてOK
+//   //767以下も10pxに戻る。なのでかく必要ある
+
+//   //inner~max-screen
+//   @media (min-width: 1100px) {
+//   font-size: 10px;
+//   }
+//   // 1100px以上はフォントを10pxに戻す
+// }
+
+// img{
+//   display: block;
+//   max-width: 100%;
+//   height: auto;
+//   object-fit: cover;
+// }

@@ -1,0 +1,95 @@
+@charset "utf-8";
+
+.price{
+  &__wrapper{
+    max-width: 104rem;
+    // サイドの余白を引いた幅
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 15.3rem;
+  }
+  &__container{
+    max-width: 49.4rem;
+    width: 100%;
+    background-color:rgba(255,255,255,0.8);
+    // 背景色だけ透過
+    border: 5px solid #A38787;
+    box-sizing: border-box;
+    @include mq(mi){
+      max-width: initial;
+    }
+  }
+  &__titlebox{
+    text-align: center;
+    padding-top: 6.2rem;
+    @include mq(mi){
+      padding-top: 7.1rem;
+    }
+  }
+  &__subTitle{
+    font-size: 1.6rem;
+    margin: 3.5rem 0 8.1rem 0;
+    @include mq(mi){
+      font-size: 1.2rem;
+      margin-top: 3.1rem;
+    }
+  }
+  &__box{
+    max-width: 32.4rem;
+    width: 100%;
+    margin: 0 auto;
+    padding-bottom: 7.4rem;
+    @include mq(mi){
+      max-width: initial;
+    }
+  }
+  &__menu{
+    font-size: 1.6rem;
+    display: flex;
+    flex-wrap: wrap;
+    @include mq(mi){
+      font-size: 1.2rem;
+      padding-left: 6.1rem;
+    }
+  }
+  &__item{
+    padding-right: 1.6rem;
+    text-align: left;
+    width: 40%;
+    @include mq(mi){
+      width: 30%;
+      white-space: nowrap;
+    }
+  }
+  &__money{
+    text-align: right;
+    width: 60%;
+    @include mq(mi){
+      width: 50%;
+    }
+  }
+  &__item,
+  &__money{
+    border-bottom: 1px dotted #707070;
+    padding: 1rem 0;
+  }
+  &__imgbox{
+    // background-image: url(/images/price_pc.jpg);
+    background-image: url(..//images/price_pc.jpg);
+    background-repeat:  no-repeat; 
+    background-position: right 10rem;
+    padding-bottom: 30rem;
+    @include mq(mi){
+      // background-image: url(/images/price_sp.jpg);
+      background-image: url(..//images/price_sp.jpg);
+      background-position: center;
+      background-size: cover;
+      padding: 8rem;
+    }
+  }
+}
+
+.boder__none{
+  border-bottom:none;
+}
+

@@ -1,0 +1,28 @@
+@charset "utf-8"; 
+
+body{
+    font-family: 'Montserrat',  sans-serif, "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
+}
+// フォント一番最初に欧文を配置しておくと、アルファベットの時に欧文になる。
+
+h1,h2{
+    // font-family: 'Montserrat',  sans-serif;
+    text-transform: capitalize;
+}
+
+// .font__m{
+//     font-family: 'Montserrat',  sans-serif;
+// }
+
+/* 小文字を大文字に変換 */
+.font__up{
+    text-transform: uppercase;
+}
+/* 頭文字だけ大文字に変換 */
+.font__cap{
+    text-transform: capitalize;
+}
+/* 大文字を小文字に変換 */
+.font__lo{
+    text-transform: lowercase;
+}

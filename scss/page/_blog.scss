@@ -1,0 +1,82 @@
+@charset "utf-8";
+
+.blog{
+  &__wrapper{
+    width: 100%;
+    margin: 0 auto;
+    background: #F2F2F2;
+    margin-top: 30rem;
+    @include mq(mi){
+      margin-top: 30rem;
+    }
+  }
+  &__container{
+    max-width: 128rem;
+    width: 100%;
+    margin: 0 auto;
+  }
+  &__titlebox{
+    padding-left: 13.8rem;
+    padding-top: 13.6rem;
+    @include mq(mi){
+      padding-left: 1.5rem;
+      padding-top: 8.5rem;
+    }
+  }
+  &__subTitle{
+    font-size: 1.6rem;
+    margin: 4.4rem 0 6.2rem 0;
+    @include mq(mi){
+      font-size: 1.2rem;
+      margin: 3rem 0 4.5rem 0;
+    }
+  }
+  &__area{
+    max-width: 100.4rem;
+    width: calc(78.3333% - 1.5rem * 1 / 3);
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 13.6rem;
+    padding-left: 13.8rem;
+    @include mq(mi){
+      max-width: initial;
+      width: 95%;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      padding-bottom: 9.6rem;
+      padding-left: 1.5rem;
+    }
+  }
+  &__imgbox{
+    padding-top: 66.66666%;
+    // 216 割る 324 かける 100
+    position: relative;
+  }
+  &__img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    // top:50%;
+    // left: 50%;
+    // transform: translate(50% - 50%);
+    width: 100%;
+    height: 100%;
+    // object-fit: cover;
+  }
+}
+
+.blog__unit:nth-child(2n){
+  @include mq(mi){
+    padding-left: 1.5rem;
+  }
+}  
+
+.blog__unit +
+.blog__unit{
+  margin-left: 1.5rem;
+  @include mq(mi){
+    margin-left: 0;
+  }
+}
+

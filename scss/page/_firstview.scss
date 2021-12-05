@@ -1,0 +1,68 @@
+@charset "utf-8";
+
+.firstView{
+  &__wrapper{
+    max-width: auto;
+    width: 100%;
+    margin: 0 auto;
+  }
+  &__titleBox{
+    max-width: 128rem;
+    width: 100%;
+    margin: 0 auto;
+    color: #FFF;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    top: 36rem;
+    @include mq(mi){
+      top: 16.9rem;
+    }
+  }
+  &__title{
+    max-width: 34.9rem;
+    width: 100%;
+    font-size: 6.4rem;
+    line-height: 1.25;
+    font-weight: bold;
+    margin: 0 0 2.3rem 13.9rem;
+    @include mq(mi){
+      max-width: 21.8rem;
+      font-size: 4rem;
+      margin: 0 0 0.8rem 1.8rem;
+    }
+  }
+  &__pcTitle{
+    @include mq(mi){
+      display: none;
+    }
+  }
+  &__subTitle{
+    max-width: 47.5rem;
+    width: 100%;
+    font-size: 2.4rem;
+    letter-spacing: 0.12rem;
+    line-height: 1.3;
+    margin-left: 13.9rem;
+    @include mq(mi){
+      max-width: 18.4rem;
+      font-size: 1.6rem;
+      margin-left: 1.8rem;
+    }
+  }
+  &__imgBox{
+    width: 100%;
+    height: 100vh;
+    background-image: url(..//images/header_pc.jpg);
+    background-size:  cover;
+    background-repeat:  no-repeat;
+    // background-position: left 50% top 48px,center; 
+    @include mq(mi){
+      width: 100%;
+      background-image: url(..//images/header_sp.jpg);
+    }
+  }
+}
+

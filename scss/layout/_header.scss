@@ -1,0 +1,139 @@
+@charset "utf-8"; 
+
+.header{
+  &__wrapper{
+    max-width: 128rem;
+    width: 100%;
+    margin: 0 auto;
+    color: #FFFFFF;
+    position: relative;
+  }
+  &__nav{
+    position: absolute;
+    z-index: 2;
+    margin-right: 2.7rem;
+    right: auto;
+    left: 50%;
+    @include mq(mi){
+      /*position:fixed;にし、z-indexの数値を大きくして前面へ*/
+      position:fixed;
+      z-index: 9;
+      /*ナビのスタート位置と形状*/
+      top:0;
+      right: -120%;
+      left:auto; //これ入れないと隠れて出てこない！！
+      width: 84%;
+      /*ナビの高さ*/
+      // height: 736px;
+      /*表示する高さ*/
+      height: 100vh;
+      background:#FFFFFF;
+      opacity: 0.8;
+      /*動き*/
+      transition: all 0.6s;
+      margin-right: 0;
+    }
+  }
+}
+
+.headerTitle{
+  &__mainTitle{
+    font-size: 2rem;
+    letter-spacing: 0.1rem;
+    font-weight: bold;
+    margin: 3.6rem 0 0 4rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    @include mq(mi){
+      margin-left: 2.1rem;
+    }
+  }
+  &__subTitle{
+    font-size: 1.2rem;
+    margin-left: 4rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    margin-top: 7rem;
+    @include mq(mi){
+      margin-left: 2.1rem;
+    }
+  }
+}
+
+.globalNav__menu{
+  display: flex;
+  margin: 2.8rem 0 0 0;
+  @include mq(mi){
+    position: absolute;
+    z-index: 999;
+    top:21%;
+    left:9%;
+    // transform: translate(-50%,-50%);
+    display: block;
+    margin: 0;
+  }
+}
+
+.globalNavMenu{
+  &__list{
+    font-size: 1.8rem;
+    font-weight: normal;
+    padding-left: 6.4rem;
+    @include mq(mi){
+      font-size: 2.4rem;
+      padding-left: 0;
+      padding-bottom: 3.7rem;
+    }
+  }
+  &__link{
+    color: #FFF;
+    @include mq(mi){
+      color: #000000;
+    }
+  }
+}
+
+.globalNavMenu__link:hover{
+  border-bottom: 3px solid #FFF; /* 線の太さ 線の種類 線の色 */
+}
+
+// ハンバーガー、ジェークエリー部分
+
+/*アクティブクラスがついたら位置を0に右から出てくる*/
+.globalNav.panelactive{
+  @include mq(mi){
+    right: 0;
+  }
+}
+/*アクティブクラスがついたら位置を0に右から出てくる
+メニューをクリックしても閉じる*/
+.globalNavMenu__list.panelactive{
+  @include mq(mi){
+    right: 0;
+  }
+}
+
+//しかいい枠を消すための
+.burger__btn.panelactive{
+  @include mq(mi){
+    background-color:rgba(255,255,255,0.1);
+  }
+}
+
+//spでタイトルの色の変更
+.firstView__title.panelactive{
+  @include mq(mi){
+    color: #121212;
+  }
+}
+
+
+
+
+
